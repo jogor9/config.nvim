@@ -121,9 +121,18 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Expand tabs
+vim.opt.expandtab = true
+
 -- Save undo history
 vim.opt.undofile = true
-vim.opt.backupdir = '$XDG_STATE_HOME/nvim/backup//'
+do
+  local st = vim.fn.getenv 'XDG_STATE_HOME'
+  if st == nil then
+    st = vim.fn.getenv 'HOME' .. '/.local/state'
+  end
+  vim.opt.backupdir = st .. '/nvim/backup//'
+end
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
