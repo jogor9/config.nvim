@@ -126,12 +126,10 @@ vim.opt.expandtab = true
 
 -- Save undo history
 vim.opt.undofile = true
-do
-  local st = vim.fn.getenv 'XDG_STATE_HOME'
-  if st == nil then
-    st = vim.fn.getenv 'HOME' .. '/.local/state'
-  end
-  vim.opt.backupdir = st .. '/nvim/backup//'
+if os.getenv 'XDG_STATE_HOME' == nil then
+  vim.opt.backupdir = os.getenv 'HOME' .. '/.local/state'
+else
+  vim.opt.backupdir = os.getenv 'XDG_STATE_HOME'
 end
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
