@@ -170,6 +170,13 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>de', '<cmd>Explore<CR>')
+vim.keymap.set('n', '<leader>dd', '<cmd>Lexplore<CR>')
+vim.keymap.set('n', '<leader>dt', '<cmd>Texplore<CR>')
+vim.keymap.set('n', '<leader>ds', '<cmd>Sexplore<CR>')
+vim.keymap.set('n', '<leader>dv', '<cmd>Vexplore<CR>')
+vim.keymap.set('n', '<leader>dh', '<cmd>Hexplore<CR>')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
