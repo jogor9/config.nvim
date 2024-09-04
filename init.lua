@@ -716,6 +716,11 @@ require('lazy').setup({
         cpp = { 'clang-format' },
         haskell = { 'ormolu' },
         scala = { 'scalafmt' },
+        csharp = { 'clang-format' },
+        json = { 'clang-format' },
+        javascript = { 'clang-format' },
+        java = { 'clang-format' },
+        cmake = { 'cmakelang' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
