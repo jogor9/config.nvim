@@ -710,6 +710,11 @@ require('lazy').setup({
           lsp_format = lsp_format_opt,
         }
       end,
+      formatters = {
+        rustfmt = {
+          args = { '--force' },
+        },
+      },
       formatters_by_ft = {
         lua = { 'stylua' },
         c = { 'clang-format' },
