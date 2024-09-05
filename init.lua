@@ -721,6 +721,7 @@ require('lazy').setup({
         javascript = { 'clang-format' },
         java = { 'clang-format' },
         cmake = { 'cmakelang' },
+        rust = { 'rustfmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
